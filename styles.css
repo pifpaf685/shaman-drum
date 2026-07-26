@@ -91,9 +91,10 @@ a {
 }
 
 .hero {
+  align-items: stretch;
   display: grid;
-  grid-template-columns: minmax(320px, 0.86fr) minmax(0, 1.14fr);
-  min-height: calc(100vh - 78px);
+  grid-template-columns: minmax(320px, 1fr) minmax(0, 0.78fr);
+  min-height: min(760px, calc(100vh - 78px));
   overflow: hidden;
 }
 
@@ -221,14 +222,27 @@ h2 {
 .hero-image {
   height: 100%;
   margin: 0;
-  min-height: 620px;
+  min-height: 430px;
 }
 
 .hero-image img {
   height: 100%;
   object-fit: cover;
   object-position: 52% center;
+  transform: scale(0.7);
+  transform-origin: center;
   width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    grid-template-columns: minmax(420px, 1.12fr) minmax(0, 0.68fr);
+    min-height: 680px;
+  }
+
+  .hero-copy {
+    max-width: 620px;
+  }
 }
 
 .section {
@@ -450,6 +464,10 @@ figcaption {
 
   .hero-image {
     min-height: 420px;
+  }
+
+  .hero-image img {
+    transform: none;
   }
 
   .instrument-copy {
