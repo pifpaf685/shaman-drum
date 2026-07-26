@@ -443,10 +443,17 @@ figcaption {
   }
 
   .hero,
-  .making,
   .instrument,
   .character {
     grid-template-columns: 1fr;
+  }
+
+  .making {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    grid-template-columns: none;
+    max-width: none;
   }
 
   .hero {
@@ -472,6 +479,30 @@ figcaption {
 
   .instrument-copy {
     max-width: 620px;
+  }
+
+  .making .section-copy {
+    background: var(--paper-soft);
+    border: 1px solid rgba(123, 75, 39, 0.14);
+    box-shadow: 0 18px 50px var(--shadow);
+    margin: 0;
+    order: -1;
+    padding: 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .making-gallery {
+    align-items: start;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .making-gallery img {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
   }
 
   .character-photo {
@@ -504,7 +535,27 @@ figcaption {
   .product-grid img,
   .making-gallery img,
   .making-gallery .gallery-tall {
-    aspect-ratio: 1.16 / 1;
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .making {
+    gap: 22px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .making .section-copy {
+    padding: 24px 20px;
+  }
+
+  .making .section-copy h2 {
+    font-size: clamp(2rem, 12vw, 2.75rem);
+  }
+
+  .making-gallery {
+    gap: 10px;
   }
 
   .specs div {
