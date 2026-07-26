@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="NOAIDI">
+  <rect width="180" height="180" rx="36" fill="#f5efe4"/>
+  <circle cx="90" cy="90" r="55" fill="none" stroke="#7b4b27" stroke-width="12"/>
+  <circle cx="90" cy="90" r="36" fill="#fbf7ef" stroke="#d8cabc" stroke-width="6"/>
+  <path d="M48 132 132 48" stroke="#5c351c" stroke-width="12" stroke-linecap="round"/>
+</svg>
