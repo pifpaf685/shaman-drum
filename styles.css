@@ -220,7 +220,23 @@ h2 {
   margin: 38px 0 0;
 }
 
-.delivery-note span,
+.nova-poshta-mark {
+  align-items: center;
+  background: #e30613;
+  color: #fff;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 28px;
+  justify-content: center;
+  width: 28px;
+}
+
+.nova-poshta-mark svg {
+  fill: currentColor;
+  height: 21px;
+  width: 21px;
+}
+
 .leaf-mark {
   color: var(--brand);
   font-size: 1.45rem;
