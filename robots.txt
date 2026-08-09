@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pifpaf685.github.io/shaman-drum/sitemap.xml
+Sitemap: https://xn--90aam6a1a.com/sitemap.xml
