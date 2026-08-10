@@ -56,6 +56,10 @@ Instagram:
 
 > https://www.instagram.com/sviatogor_magur/
 
+WhatsApp:
+
+> https://wa.me/380506035445
+
 ## Що було складним і що не повторювати
 
 1. **Дублювання секційних заголовків**
