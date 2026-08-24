@@ -97,6 +97,10 @@ summary:focus-visible {
   padding: 0 14px;
 }
 
+.mobile-sticky-cta {
+  display: none;
+}
+
 .hero {
   align-items: stretch;
   display: grid;
@@ -170,6 +174,12 @@ h2 {
 .hero-text {
   margin-bottom: 30px;
   max-width: 470px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 .button {
@@ -382,6 +392,8 @@ h2 {
   background: var(--paper-soft);
   border: 1px solid var(--line);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   scroll-margin-top: 96px;
 }
@@ -411,6 +423,27 @@ h2 {
   font-size: 1.18rem;
   font-weight: 900;
   margin-bottom: 10px;
+}
+
+.price-link {
+  align-items: center;
+  align-self: flex-start;
+  border-bottom: 1px solid rgba(123, 75, 39, 0.42);
+  color: var(--brand-dark);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 800;
+  min-height: 44px;
+  letter-spacing: 0.08em;
+  margin-top: 12px;
+  padding: 0 0 4px;
+  text-transform: uppercase;
+}
+
+.price-link:hover,
+.price-link:focus-visible {
+  border-color: var(--brand-dark);
+  color: var(--brand);
 }
 
 .instrument {
@@ -723,6 +756,10 @@ figcaption {
 }
 
 @media (max-width: 620px) {
+  body {
+    padding-bottom: 80px;
+  }
+
   .brand {
     font-size: 2rem;
   }
@@ -794,6 +831,10 @@ figcaption {
     width: 100%;
   }
 
+  .hero-actions {
+    width: 100%;
+  }
+
   .order-actions {
     width: 100%;
   }
@@ -802,5 +843,36 @@ figcaption {
     align-items: center;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .mobile-sticky-cta {
+    align-items: center;
+    background: var(--brand);
+    bottom: max(14px, env(safe-area-inset-bottom));
+    box-shadow: 0 14px 34px rgba(74, 54, 39, 0.24);
+    color: #fff9ef;
+    display: flex;
+    font-size: 0.82rem;
+    font-weight: 900;
+    justify-content: center;
+    left: 18px;
+    letter-spacing: 0.1em;
+    min-height: 52px;
+    opacity: 0;
+    padding: 0 18px;
+    pointer-events: none;
+    position: fixed;
+    right: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateY(18px);
+    transition: opacity 160ms ease, transform 160ms ease;
+    z-index: 20;
+  }
+
+  .mobile-sticky-cta.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 }
