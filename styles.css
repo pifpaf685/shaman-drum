@@ -323,9 +323,12 @@ h2 {
 .delivery {
   background: var(--paper-soft);
   grid-template-columns: minmax(0, 0.76fr);
+  justify-content: center;
+  text-align: center;
 }
 
 .delivery .section-copy {
+  margin: 0 auto;
   max-width: 760px;
 }
 
@@ -465,6 +468,15 @@ h2 {
   max-width: 420px;
 }
 
+#gallery.instrument {
+  display: block;
+}
+
+#gallery .instrument-copy {
+  margin-bottom: clamp(32px, 4.6vw, 58px);
+  max-width: 760px;
+}
+
 .product-grid {
   display: grid;
   gap: 20px;
@@ -529,6 +541,12 @@ figcaption {
   text-transform: uppercase;
 }
 
+@media (min-width: 1180px) {
+  .gallery-catalog {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .gallery-lightbox {
   background: rgba(28, 22, 18, 0.92);
   border: 0;
@@ -586,27 +604,27 @@ figcaption {
 }
 
 .character {
-  display: grid;
-  gap: clamp(32px, 5vw, 70px);
-  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
   margin: 0 auto;
   max-width: var(--page-max);
   width: 100%;
 }
 
 .character-photo {
-  margin-left: 0;
+  margin: clamp(30px, 4.6vw, 56px) 0 0;
+  max-width: 760px;
 }
 
 .character-photo img {
-  height: min(520px, 64vw);
+  aspect-ratio: 3 / 4;
+  height: auto;
   object-fit: cover;
-  object-position: 46% center;
+  object-position: center center;
   width: 100%;
 }
 
 .character .section-copy {
-  padding: clamp(54px, 7vw, 110px) 0;
+  max-width: 720px;
+  padding: 0;
 }
 
 .order {
@@ -642,21 +660,24 @@ figcaption {
 }
 
 .faq {
-  display: grid;
+  display: block;
   gap: clamp(26px, 4vw, 54px);
-  grid-template-columns: minmax(240px, 0.54fr) minmax(0, 1fr);
   margin: 0 auto;
   max-width: var(--page-max);
   width: 100%;
 }
 
 .faq-intro {
-  align-self: start;
+  margin: 0 auto clamp(28px, 4vw, 52px);
+  max-width: 760px;
+  text-align: center;
 }
 
 .faq-list {
   display: grid;
   gap: 10px;
+  margin: 0 auto;
+  max-width: 760px;
 }
 
 .faq-list details {
@@ -670,7 +691,7 @@ figcaption {
   cursor: pointer;
   font-weight: 800;
   line-height: 1.35;
-  list-style-position: outside;
+  list-style-position: inside;
   min-height: 56px;
   padding: 18px 22px;
 }

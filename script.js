@@ -4,6 +4,7 @@ const stickyCta = document.querySelector(".mobile-sticky-cta");
 const hero = document.querySelector(".hero");
 const orderSection = document.querySelector("#order");
 const gallerySection = document.querySelector("#gallery");
+const masterSection = document.querySelector("#master");
 const mobileQuery = window.matchMedia("(max-width: 620px)");
 const galleryDialog = document.querySelector(".gallery-lightbox");
 const galleryDialogImage = galleryDialog?.querySelector("img");
@@ -46,14 +47,18 @@ const updateStickyCta = () => {
   const heroBottom = hero?.getBoundingClientRect().bottom ?? 0;
   const orderTop = orderSection?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY;
   const galleryRect = gallerySection?.getBoundingClientRect();
+  const masterRect = masterSection?.getBoundingClientRect();
   const pastHero = heroBottom < window.innerHeight * 0.35;
   const beforeOrder = orderTop > window.innerHeight * 0.7;
   const viewingGallery = galleryRect
     ? galleryRect.top < window.innerHeight * 0.82 && galleryRect.bottom > window.innerHeight * 0.18
     : false;
+  const viewingMaster = masterRect
+    ? masterRect.top < window.innerHeight * 0.82 && masterRect.bottom > window.innerHeight * 0.18
+    : false;
   const lightboxOpen = galleryDialog?.hasAttribute("open") ?? false;
 
-  setStickyVisible(pastHero && beforeOrder && !viewingGallery && !lightboxOpen);
+  setStickyVisible(pastHero && beforeOrder && !viewingGallery && !viewingMaster && !lightboxOpen);
 };
 
 window.addEventListener("scroll", updateStickyCta, { passive: true });
